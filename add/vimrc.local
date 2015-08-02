@@ -1,0 +1,57 @@
+
+" Bundle {{{
+
+Plugin 'ludovicchabant/vim-lawrencium'
+Plugin 'tpope/vim-surround'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'shougo/neocomplete.vim'
+" }}}
+
+" Bundle Configurations {{{
+
+" airline fix
+set noshowmode
+set laststatus=2
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" ctrlp settings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" bufexplorer
+nmap <silent> <Leader>b :BufExplorer<CR>
+nmap <Leader>e :ToggleBufExplorer<CR>
+nmap <Leader>h :BufExplorerHorizontalSplit<CR>
+nmap <Leader>v :BufExplorerVerticalSplit<CR>
+
+" easymotion
+let g:EasyMotion_do_mapping = 1 " Disable default mappings
+let g:EasyMotion_leader_key = ','
+
+" Mercurial (aka lawrencium)
+"let mapleader = ","
+"let g:mapleader = ","
+
+nmap <leader>hs :Hgstatus<CR>
+nmap <leader>hd :Hgdiff<CR>
+nmap <leader>hr :Hgrecord<CR>
+nmap <leader>hq :Hgrecordabort<CR>
+
+" }}}
+
+" User Configurations {{{
+
+set relativenumber " to help with the jumps
+
+set pastetoggle=<F2>
+
+" }}}
