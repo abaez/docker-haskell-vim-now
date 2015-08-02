@@ -2,7 +2,7 @@ FROM haskell
 
 # Install predepends
 RUN apt-get update &&  apt-get install -y git vim curl build-essential \
-   exuberant-ctags libcurl4-openssl-dev
+   exuberant-ctags libcurl4-openssl-dev mercurial
 RUN apt-get clean
 
 # install vim-now
@@ -17,4 +17,3 @@ RUN rm /root/.cabal -rf
 # app directory
 RUN mkdir /project
 WORKDIR /project
-

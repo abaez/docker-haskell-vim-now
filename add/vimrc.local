@@ -28,8 +28,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " bufexplorer
-nmap <silent> <Leader>b :BufExplorer<CR>
-nmap <Leader>e :ToggleBufExplorer<CR>
+nmap <Leader>b :BufExplorer<CR>
+nmap <Leader>be :ToggleBufExplorer<CR>
 nmap <Leader>h :BufExplorerHorizontalSplit<CR>
 nmap <Leader>v :BufExplorerVerticalSplit<CR>
 
