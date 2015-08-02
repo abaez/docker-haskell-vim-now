@@ -11,7 +11,10 @@ RUN curl https://raw.githubusercontent.com/begriffs/haskell-vim-now/master/insta
 # install custom vim settings
 ADD ./add/vimrc.local /root/.vimrc.local
 
+# remove cabal bloat
+RUN rm /root/.cabal -rf
+
 # app directory
-RUN mkdir /app
-WORKDIR /app
+RUN mkdir /project
+WORKDIR /project
 
